@@ -5,7 +5,9 @@ Please execute following command to install all required modules:
 
 To build the appliaction execute:
 > `npm run build`<br />
+
 To run the appliaction execute:
 > `npm start` <br />
+
 To execute Unit Tests:
 > `npm run test`<br />
