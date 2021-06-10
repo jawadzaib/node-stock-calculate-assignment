@@ -26,7 +26,10 @@ export const calculateStock = (sku: string): Promise<StockItem> => {
             }
             let total = (stockItem.stock) ? stockItem.stock : 0;
             transactions.forEach(item => {
-                total += item.qty;
+                if(item.type === "refund")
+                    total -= item.qty;
+                else 
+                    total += item.qty;
             })
             resolve({sku: stockItem.sku, stock: total});
         } catch(error: any) {
